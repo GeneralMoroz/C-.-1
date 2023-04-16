@@ -1,83 +1,53 @@
-﻿// Задача 1.Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-// Console.WriteLine("Введите число");
-// int number1=Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите второе число");
-// int number2=Convert.ToInt32(Console.ReadLine());
+﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
-// if (number1 > number2)
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+// int num =new Random().Next(100,1000);
+// Console.WriteLine("Случайное число:" + num);
+
+// int num2 = (num /10) % 10;
+// Console.WriteLine (num2);
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// 645 -> 5
+
+// 78 -> третьей цифры нет
+
+// 32679 -> 6
+Console.WriteLine ("Введите число:");
+int num = Convert.ToInt32(Console.ReadLine());
+int num2 = num / 100;
+int num3 = num% 10;
+if (num2 == 0)
+{
+    Console.WriteLine("Третей цифры нет");
+}
+else 
+{
+    Console.WriteLine(num3); //не решил, т.к не понял как выроботать едирый алгоритм для бесконечность цифр
+}
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+// Console.WriteLine("Введите число:");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+
+// if (num == 6 || num == 7)
 // {
-
-//     Console.WriteLine(number1);
+//     Console.WriteLine("Этот день  выходной");
 // }
-// else if (number1 == number2)
+// else if (num == 1 || num == 2 || num == 3 || num == 4|| num == 5)
 // {
-//     Console.WriteLine("Числа равны");
+//     Console.WriteLine("Этот день не выходной");
 // }
 // else 
 // {
-// Console.WriteLine(number2);
+//     Console.WriteLine("Такого дня не существует");
 // }
-
-// Задача 2.Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-
-// Console.WriteLine("Введите число");
-// int number1=Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите второе число");
-// int number2=Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите третье число");
-// int number3=Convert.ToInt32(Console.ReadLine());
-// int max = number1;
-
-// if (max < number2)
-// {
-//     max = number2;
-// }
-// else 
-// {
-//     max = number1;
-//     }
-
-// if(max < number3)
-
-// {
-//     max =number3;
-// }
-// else
-// {
-//     max = max;
-// }
-// Console.WriteLine("Максимальное число равно:");
-// Console.Write(max);
-
-// Задача 3: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
-
-
-// Console.WriteLine("Введите число");
-// int number=Convert.ToInt32(Console.ReadLine());
-// int result = number%2;
-// if ( result == 0)
-// {
-//  Console.WriteLine("Число является четным");   
-// } 
-// else
-// {
-//     Console.WriteLine("Число является нечетным");   
-// }
-
-// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-Console.WriteLine("Введите число");
-int n=Convert.ToInt32(Console.ReadLine());
-int nn=1;
-int result = nn%2;
-while (n > nn)
-{
-    if ( result == 0)
-{
-Console.WriteLine(nn);  
-}
-else
-{
- nn = nn + 1;
-} 
-}
-//не понял как делать
