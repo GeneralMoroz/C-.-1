@@ -1,53 +1,67 @@
-﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿
+// Задача 19
 
-// 456 -> 5
-// 782 -> 8
-// 918 -> 1
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-// int num =new Random().Next(100,1000);
-// Console.WriteLine("Случайное число:" + num);
+// 14212 -> нет
 
-// int num2 = (num /10) % 10;
-// Console.WriteLine (num2);
+// 12821 -> да
 
-// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// 23432 -> да
 
-// 645 -> 5
-
-// 78 -> третьей цифры нет
-
-// 32679 -> 6
-Console.WriteLine ("Введите число:");
-int num = Convert.ToInt32(Console.ReadLine());
-int num2 = num / 100;
-int num3 = num% 10;
-if (num2 == 0)
-{
-    Console.WriteLine("Третей цифры нет");
-}
-else 
-{
-    Console.WriteLine(num3); //не решил, т.к не понял как выроботать едирый алгоритм для бесконечность цифр
-}
-// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-
-// 6 -> да
-// 7 -> да
-// 1 -> нет
-
-// Console.WriteLine("Введите число:");
+// Console.WriteLine("Введите пятизначное число ");
 // int num = Convert.ToInt32(Console.ReadLine());
+// int num2 = num / 10000;
+// int num3 = (num / 1000)%10;
+// int num4 = num%10;
+// int num5 = (num%100)/10;
 
 
-// if (num == 6 || num == 7)
+// if (num2 == num4 || num3 == num5)
 // {
-//     Console.WriteLine("Этот день  выходной");
+//     Console.WriteLine("Да");
 // }
-// else if (num == 1 || num == 2 || num == 3 || num == 4|| num == 5)
+// else
 // {
-//     Console.WriteLine("Этот день не выходной");
+//    Console.WriteLine("Нет"); 
 // }
-// else 
+// Задача 21
+
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// A (3,6,8); B (2,1,-7), -> 15.84
+
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+// Console.WriteLine("Введите число координаты x первой точки ");
+// int X1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число ");
+// int X2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число ");
+// int Y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число ");
+// int Y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число ");
+// int Z1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число ");
+// int Z2 =  Convert.ToInt32(Console.ReadLine());
+
+// double d=Math.Sqrt(Math.Pow((X2-X1),2)+Math.Pow((Y2-Y1),2)+Math.Pow((Z2-Z1),2));
+// Console.WriteLine(d);
+
+
+// Задача 23
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// // 3 -> 1, 8, 27
+// // 5 -> 1, 8, 27, 64, 125
+
+//  Console.WriteLine("Введите число:");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int i = 1;
+// while (i <= num)
 // {
-//     Console.WriteLine("Такого дня не существует");
+// Console.WriteLine(Math.Pow(i,3));
+// i++;
 // }
