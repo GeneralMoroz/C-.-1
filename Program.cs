@@ -1,67 +1,66 @@
 ﻿
-// Задача 19
 
-// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// +Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 
-// 14212 -> нет
+// 3, 5 -> 243 (3⁵)
 
-// 12821 -> да
+// 2, 4 -> 16
 
-// 23432 -> да
+// Console.WriteLine("Введите число:");
+// int A = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите , в степень которого вы хотите возвести предыдущее число:");
+// int B = Convert.ToInt32(Console.ReadLine());
+// double pow = Math.Pow(A,B);
 
-// Console.WriteLine("Введите пятизначное число ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int num2 = num / 10000;
-// int num3 = (num / 1000)%10;
-// int num4 = num%10;
-// int num5 = (num%100)/10;
+// Console.WriteLine(pow);
 
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-// if (num2 == num4 || num3 == num5)
-// {
-//     Console.WriteLine("Да");
-// }
-// else
-// {
-//    Console.WriteLine("Нет"); 
-// }
-// Задача 21
+// 452 -> 11
 
-// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// 82 -> 10
 
-// A (3,6,8); B (2,1,-7), -> 15.84
+// // 9012 -> 12
+// Console.WriteLine("Введите число:");
+// int A = Convert.ToInt32(Console.ReadLine());
+// int sum=0;
 
-// A (7,-5, 0); B (1,-1,9) -> 11.53
-
-// Console.WriteLine("Введите число координаты x первой точки ");
-// int X1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число ");
-// int X2 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число ");
-// int Y1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число ");
-// int Y2 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число ");
-// int Z1 = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число ");
-// int Z2 =  Convert.ToInt32(Console.ReadLine());
-
-// double d=Math.Sqrt(Math.Pow((X2-X1),2)+Math.Pow((Y2-Y1),2)+Math.Pow((Z2-Z1),2));
-// Console.WriteLine(d);
+//     while(A!=0)
+//     {
+// sum = sum + A%10;
+// A /=10;
+//     }
+// Console.WriteLine($"Сумма цифр в числе = {sum}");
 
 
-// Задача 23
 
-// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-// // 3 -> 1, 8, 27
-// // 5 -> 1, 8, 27, 64, 125
 
-//  Console.WriteLine("Введите число:");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int i = 1;
-// while (i <= num)
-// {
-// Console.WriteLine(Math.Pow(i,3));
-// i++;
-// }
+//+ Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+// // 6, 1, 33 -> [6, 1, 33]
+
+
+        //      Console.Write("Введите первое число: ");
+        //     var number1 = Convert.ToInt32(Console.ReadLine());
+        //     Console.Write("Введите второе число: ");
+        //     var number2 = Convert.ToInt32(Console.ReadLine());
+        //       Console.Write("Введите третье число: ");
+        //     var number3 = Convert.ToInt32(Console.ReadLine());
+        //     Console.Write("Введите четвертое число: ");
+        //     var number4 = Convert.ToInt32(Console.ReadLine());
+        //       Console.Write("Введите пятое число: ");
+        //     var number5 = Convert.ToInt32(Console.ReadLine());
+        //     Console.Write("Введите шестое число: ");
+        //     var number6 = Convert.ToInt32(Console.ReadLine());
+        //       Console.Write("Введите седьмое число: ");
+        //     var number7 = Convert.ToInt32(Console.ReadLine());
+        //     Console.Write("Введите восьмое число: ");
+        //     var number8 = Convert.ToInt32(Console.ReadLine());
+          
+        //         var array = new int [8] {number1,number2,number3,number4,number5,number6,number7,number8};
+                
+        //      foreach(var value in array)
+        // Console.Write( $";" + value);
