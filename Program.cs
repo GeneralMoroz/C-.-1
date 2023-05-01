@@ -1,66 +1,74 @@
 ﻿
 
-// +Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+//         Урок 5. Функции и одномерные массивы
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+//Напишите программу, которая покажет количество чётных чисел в массиве.
 
-// 3, 5 -> 243 (3⁵)
+// [345, 897, 568, 234] -> 2
 
-// 2, 4 -> 16
+// int[] array =  new int[5];
+// int num = 0;
 
-// Console.WriteLine("Введите число:");
-// int A = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите , в степень которого вы хотите возвести предыдущее число:");
-// int B = Convert.ToInt32(Console.ReadLine());
-// double pow = Math.Pow(A,B);
-
-// Console.WriteLine(pow);
-
-// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-
-// 452 -> 11
-
-// 82 -> 10
-
-// // 9012 -> 12
-// Console.WriteLine("Введите число:");
-// int A = Convert.ToInt32(Console.ReadLine());
-// int sum=0;
-
-//     while(A!=0)
-//     {
-// sum = sum + A%10;
-// A /=10;
-//     }
-// Console.WriteLine($"Сумма цифр в числе = {sum}");
+// for(int i = 0; i<array.Length;i++)
+// {
+//     array[i] = new Random().Next(100,1000);
+//         if (array[i]%2 == 0)
+//         {
+//                 num++;
+              
+//         }
+// }
+// Console.WriteLine (String.Join(",",array));
+// Console.Write("Количество четных чисел = " +num);
 
 
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов,
+// стоящих на нечётных позициях.
 
+// [3, 7, 23, 12] -> 19
 
+// [-4, -6, 89, 6] -> 0
+// int[] array =  new int[6];
+// int num = 0;
+//  for(int i = 0; i<array.Length;i++)
+//  {
+//    array[i] = new Random().Next(0,100);
+//    if (i%2 !=0 )
+//    {
+//         num=num+array[i];
+//    }
+//  }
+//  Console.WriteLine (String.Join(",",array));
+// Console.Write("Сумма элементов стоящих на нечетных позициях = "+ num);
 
-//+ Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// [3 7 22 2 78] -> 76
 
-// // 6, 1, 33 -> [6, 1, 33]
+int[] array =  new int[6]{4,6,7,8,9,88};
+int R = 0;
+int max  = 0;
+int min = 0;
+// for(int i = 0; i<array.Length;i++)
+//  {
+//    array[i] = new Random().Next(0,100);
+ for(int i = 0; i<array.Length;i++)
+{
+if (array[i] > max)
+        {
+               max =  array[i];
+        }
 
+  else if (array[i] > min)
+        {
+               min =  array[i];
+        }
 
-        //      Console.Write("Введите первое число: ");
-        //     var number1 = Convert.ToInt32(Console.ReadLine());
-        //     Console.Write("Введите второе число: ");
-        //     var number2 = Convert.ToInt32(Console.ReadLine());
-        //       Console.Write("Введите третье число: ");
-        //     var number3 = Convert.ToInt32(Console.ReadLine());
-        //     Console.Write("Введите четвертое число: ");
-        //     var number4 = Convert.ToInt32(Console.ReadLine());
-        //       Console.Write("Введите пятое число: ");
-        //     var number5 = Convert.ToInt32(Console.ReadLine());
-        //     Console.Write("Введите шестое число: ");
-        //     var number6 = Convert.ToInt32(Console.ReadLine());
-        //       Console.Write("Введите седьмое число: ");
-        //     var number7 = Convert.ToInt32(Console.ReadLine());
-        //     Console.Write("Введите восьмое число: ");
-        //     var number8 = Convert.ToInt32(Console.ReadLine());
-          
-        //         var array = new int [8] {number1,number2,number3,number4,number5,number6,number7,number8};
-                
-        //      foreach(var value in array)
-        // Console.Write( $";" + value);
+}
+    Console.WriteLine (max);
+    Console.WriteLine (min);
+//  }
+ R = max-min;
+ Console.WriteLine (String.Join(",",array));
+ Console.Write("разница между максимальным и минимальным элементов массива = "+R);
+
