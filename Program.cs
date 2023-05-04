@@ -1,114 +1,109 @@
-﻿
+﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
-//         Урок 5. Функции и одномерные массивы
-// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
-//Напишите программу, которая покажет количество чётных чисел в массиве.
+// m = 3, n = 4.
 
-// [345, 897, 568, 234] -> 2
+// 0,5 7 -2 -0,2
 
-// int[] array =  new int[5];
-// int num = 0;
+// 1 -3,3 8 -9,9
 
-// for(int i = 0; i<array.Length;i++)
+// 8 7,8 -7,1 9
+
+// Console.WriteLine("Введите количество строк");
+// int rows = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите количество колонок");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// double [,] array =new double [rows,columns];
+
+// for (int i = 0; i < array.GetLength(0); i++)
 // {
-//     array[i] = new Random().Next(100,1000);
-//         if (array[i]%2 == 0)
-//         {
-//                 num++;
-              
-//         }
-// }
-// Console.WriteLine (String.Join(",",array));
-// Console.Write("Количество четных чисел = " +num);
-
-
-// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов,
-// стоящих на нечётных позициях.
-
-// [3, 7, 23, 12] -> 19
-
-// [-4, -6, 89, 6] -> 0
-// int[] array =  new int[6];
-// int num = 0;
-//  for(int i = 0; i<array.Length;i++)
-//  {
-//    array[i] = new Random().Next(0,100);
-//    if (i%2 !=0 )
-//    {
-//         num=num+array[i];
-//    }
-//  }
-//  Console.WriteLine (String.Join(",",array));
-// Console.Write("Сумма элементов стоящих на нечетных позициях = "+ num);
-
-// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-
-// [3 7 22 2 78] -> 76
-
-// int[] array =  new int[6]{4,6,7,8,9,88};
-// int R = 0;
-// int max  = array[0];
-// int min = array[0];
-// // for(int i = 0; i<array.Length;i++)
-// //  {
-// //    array[i] = new Random().Next(0,100);
-//  for(int i = 0; i<array.Length;i++)
+// for (int j = 0; j < array.GetLength(1); j++)
 // {
-// if (array[i] > max)
-//         {
-//                max =  array[i];
-//         }
-
-//   else if (array[i] > min)
-//         {
-//                min =  array[i];
-//         }
-
+// array[i,j] = new Random().NextDouble() * 10 ;
+// Console.Write(array[i,j]. + " ");
 // }
-//     Console.WriteLine (max);
-//     Console.WriteLine (min);
-// //  }
-//  R = max-min;
-//  Console.WriteLine (String.Join(",",array));
-//  Console.Write("разница между максимальным и минимальным элементов массива = "+R);
 
-// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// Console.WriteLine();
+// }
 
-// 0, 7, 8, -2, -2 -> 2
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 
-// // 1, -7, 567, 89, 223-> 3
-//  int A = Convert.ToInt32(Console.ReadLine().Split().Select(int.Parse).ToArray());
-// int[] array =  new int[6];
-// Console.WriteLine (A);
+// Например, задан массив:
 
-// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 1 4 7 2
 
-// 0, 7, 8, -2, -2 -> 2
+// 5 9 2 3
 
-// 1, -7, 567, 89, 223-> 3
+// 8 4 2 4
 
+// 17 -> такого числа в массиве нет
 
 // Console.WriteLine("Введите число");
 // int num = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите число");
-// int num1 = Convert.ToInt32(Console.ReadLine());
-// int[] array =  new int[]{num,num1};
-// int r =0;
-// Console.WriteLine (String.Join(",",array));
-// for(int i = 0; i<array.Length;i++)
+// int [,] array = new int [5,3];
+
+// for (int i = 0;  i < array.GetLength(0); i++)
 // {
-//     if(array[i] > 0)
-//     {
-//         r++;
-//     }
+    
+// for ( int j = 0; j < array.GetLength(1); j++)
+// {
+// array[i,j] = new Random().Next(0,10);
+
+// Console.Write(array[i,j] + " ");
+
+// if (num == array[i,j])
+// {
+// Console.WriteLine("Такое число есть");
 // }
-// Console.WriteLine(r);
 
-// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
-// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// }
 
-// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
-
+// Console.WriteLine();
+// }
 
 
 
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+Console.WriteLine("Введите число");
+int rows = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите число");
+int columns = Convert.ToInt32(Console.ReadLine());
+
+int [,] array =new int [rows,columns];
+int avg=0;
+for (int i = 0; i < array.GetLength(1); i++)
+{
+for (int j = 0; j < array.GetLength(0); j++)
+{
+array[i,j] = new Random().Next(0,10);
+Console.Write(array[i,j]+ " ");
+}
+
+Console.WriteLine();
+}
+int avg = array[i,j]/i;
+// Console.WriteLine("______");
+
+// 
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+// for (int j = 0; j < array.GetLength(1); j++)
+// {
+// if(i==j)
+// {
+// avg= avg+ array[i,j];
+// }
+// }
+// }
+
+// Console.WriteLine("Сумма "+avg);
