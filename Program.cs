@@ -1,109 +1,47 @@
-﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+﻿// Задача 64: Задайте значение N. Напишите программу,
+//  которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
 
-// m = 3, n = 4.
-
-// 0,5 7 -2 -0,2
-
-// 1 -3,3 8 -9,9
-
-// 8 7,8 -7,1 9
-
-// Console.WriteLine("Введите количество строк");
-// int rows = Convert.ToInt32(Console.ReadLine());
-
-// Console.WriteLine("Введите количество колонок");
-// int columns = Convert.ToInt32(Console.ReadLine());
-
-// double [,] array =new double [rows,columns];
-
-// for (int i = 0; i < array.GetLength(0); i++)
-// {
-// for (int j = 0; j < array.GetLength(1); j++)
-// {
-// array[i,j] = new Random().NextDouble() * 10 ;
-// Console.Write(array[i,j]. + " ");
-// }
-
-// Console.WriteLine();
-// }
-
-// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
-
-// Например, задан массив:
-
-// 1 4 7 2
-
-// 5 9 2 3
-
-// 8 4 2 4
-
-// 17 -> такого числа в массиве нет
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
 // Console.WriteLine("Введите число");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int [,] array = new int [5,3];
+// int N = Convert.ToInt32(Console.ReadLine());
+// PrintNambers(N);
 
-// for (int i = 0;  i < array.GetLength(0); i++)
+// void PrintNambers (int N) // передаем значение N
+
 // {
-    
-// for ( int j = 0; j < array.GetLength(1); j++)
-// {
-// array[i,j] = new Random().Next(0,10);
-
-// Console.Write(array[i,j] + " ");
-
-// if (num == array[i,j])
-// {
-// Console.WriteLine("Такое число есть");
-// }
-
-// }
-
-// Console.WriteLine();
+//     if(N<1)
+//     {
+//         return;
+//     }
+//      Console.Write(N + " ");
+//     PrintNambers(N-1);
+   
 // }
 
 
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
 
-// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 
 Console.WriteLine("Введите число");
-int rows = Convert.ToInt32(Console.ReadLine());
-
+int M = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число");
-int columns = Convert.ToInt32(Console.ReadLine());
+int N = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
 
-int [,] array =new int [rows,columns];
-int avg=0;
-for (int i = 0; i < array.GetLength(1); i++)
+int SumNumbers (int sum)
 {
-for (int j = 0; j < array.GetLength(0); j++)
+ 
+while (M < N)
 {
-array[i,j] = new Random().Next(0,10);
-Console.Write(array[i,j]+ " ");
+    M++;
+    sum = sum +M;
 }
 
-Console.WriteLine();
+    return  sum;
+   
 }
-int avg = array[i,j]/i;
-// Console.WriteLine("______");
-
-// 
-
-// for (int i = 0; i < array.GetLength(0); i++)
-// {
-// for (int j = 0; j < array.GetLength(1); j++)
-// {
-// if(i==j)
-// {
-// avg= avg+ array[i,j];
-// }
-// }
-// }
-
-// Console.WriteLine("Сумма "+avg);
+Console.WriteLine(SumNumbers(sum));
